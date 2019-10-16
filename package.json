@@ -1,0 +1,49 @@
+{
+  "name": "typescript-learning",
+  "version": "1.0.0",
+  "description": "typescript learning project",
+  "main": "./src/pages/index/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config build/webpack.prod.js",
+    "dev": "webpack-dev-server --open --config build/webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bddbzz/typescript-learning.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "MonkeyZz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bddbzz/typescript-learning/issues"
+  },
+  "homepage": "https://github.com/bddbzz/typescript-learning#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.6.5",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "eslint-loader": "^3.0.2",
+    "file-loader": "^4.2.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "glob": "^7.1.4",
+    "html-webpack-externals-plugin": "^3.8.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "px2rem-loader": "^0.1.9",
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2"
+  }
+}
