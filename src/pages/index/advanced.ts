@@ -84,8 +84,36 @@ interface Obj2 {
 type readonlyObj = Readonly<Obj2>
 type partialObj = Partial<Obj2>
 
-//Pick 映射类型
+//Pick 映射类型，预先定义的泛型接口
 type pickObj = Pick<Obj2, 'a' | 'b'>
 
 //同态或者非同态
 type recordObj = Record<'x' | 'y', Obj2>
+
+//条件类型
+type TypeName<T> = T extends String ? 'string' :
+    T extends Number ? 'number' :
+    T extends Boolean ? 'boolean' :
+    T extends undefined ? 'undefined' :
+    T extends Function ? 'function' :
+    'object'
+type T1 = TypeName<string>
+type T2 = TypeName<string[]>
+type T3 = TypeName<string | string[]>
+type Diff<T, U> = T extends U ? never : T
+type T4 = Diff<'a' | 'b' | 'c', 'a' | 'e'>
+//Diff <'a', 'a' | 'e'> | Diff <'b', 'a' | 'e'> | Diff <'c', 'a' | 'e'>
+//never | 'b' | 'c'
+// 'b' | 'c'
+
+type NotNull<T> = Diff<T, undefined | null>
+type T5 = NotNull<string | number | undefined | null>
+
+//Exclude<T,U>
+//NotNullable<T>
+//Extract<T, U>
+
+type T6 = Extract<'a' | 'b' | 'c', 'a' | 'b'>
+
+//ReturnType<T> 函数返回值的类型
+type T7 = ReturnType<() => string>
