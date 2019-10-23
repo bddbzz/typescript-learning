@@ -1,3 +1,4 @@
+"use strict";
 var Shape;
 (function (Shape) {
     function circle(r) {

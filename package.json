@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/bddbzz/typescript-learning#readme",
   "devDependencies": {
+    "@types/jquery": "^3.3.31",
     "autoprefixer": "^9.6.5",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
@@ -45,5 +46,9 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2",
     "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0"
   }
 }
